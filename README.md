@@ -1,98 +1,128 @@
-# 🌾 CropCraft-AI
+# Career Management for Students 🌟
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/downloads/release/python-370/)
-[![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red.svg)](https://streamlit.io)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Flask](https://img.shields.io/badge/Flask-2.0.1-green)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.6.0-orange)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-CropCraft-AI is an interactive application designed to assist users with farming and livestock-related queries. It leverages advanced AI models, speech recognition, and text-to-speech technology to provide accurate and detailed answers to user questions. The application supports multiple languages for both input and output, making it accessible to a broader audience.
+Welcome to the **Career Management for Students** project! 🎓 This web-based application helps manage student assignments, rewards them with points, and predicts the best career paths based on their performance. 🚀
 
-## 🌟 Features
+## 📑 Table of Contents
 
-- **🎤 Voice and Text Input:** Users can ask questions either by typing or using voice commands.
-- **🌐 Multilingual Support:** Answers can be translated and spoken in various languages, including English, Hindi, Telugu, and Tamil.
-- **📄 Document Processing:** The application processes PDF documents to build a knowledge base for answering questions.
-- **💻 Interactive UI:** A user-friendly interface built with Streamlit.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Usage](#usage)
+  - [Student Registration and Login](#student-registration-and-login)
+  - [Teacher Login](#teacher-login)
+  - [Assignments and Points](#assignments-and-points)
+  - [Career Prediction](#career-prediction)
+  - [Career Recommendations](#career-recommendations)
 
-## 🛠️ Tech Stack
+## 🚀 Features
 
-- **Streamlit:** For creating the web interface.
-- **SpeechRecognition:** For converting speech input into text.
-- **pyttsx3:** For text-to-speech conversion.
-- **gTTS:** For generating speech from text in different languages.
-- **GoogleTranslate:** For translating text.
-- **Google Generative AI:** For generating embeddings and conversational responses.
-- **FAISS:** For efficient similarity search.
-- **Langchain:** For managing conversational AI models.
-- **PyPDF2:** For extracting text from PDF documents.
-- **dotenv:** For managing environment variables.
+- **User Authentication** 🔐: Separate login pages for students and teachers.
+- **Assignment Management** 📝: Students can view and submit assignments.
+- **Point System** 💯: Points awarded for completed assignments, redeemable for benefits.
+- **Career Prediction** 🧠: AI model predicts the best career path for students based on their performance.
 
-## 🚀 Setup
+## 🛠️ Technologies Used
+
+- **Flask**: Web framework for Python.
+- **TensorFlow**: For building and loading the AI model.
+- **Pandas**: For data manipulation and analysis.
+- **Scikit-learn**: For preprocessing data.
+- **HTML/CSS**: For front-end design.
+
+## 📸 Screenshots
+
+Here are some screenshots of the application:
+
+1. **Home Page**
+    ![Home Page](./images/home.png)
+
+2. **Student Dashboard**
+    ![Student Login](./images/dash.png)
+
+3. **Points Earned**
+    ![Student Login](./images/predi.png)
+   
+4. **Career Prediction Results**
+    ![Career Prediction Results](./images/result.png)
+
+   
+## Getting Started 🏃‍♂️
 
 ### Prerequisites
 
-- Python 3.7 or higher
-- Pip
+Ensure you have the following installed:
+
+- Python 3.8+
+- Flask
+- TensorFlow
+- Pandas
+- Scikit-learn
 
 ### Installation
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/falcon-14/Rag-Model.git
-    cd Rag-Model
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/falcon-14/career-management.git
+    cd career-management-students
     ```
 
-2. **Create and activate a virtual environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+2. **Install the required packages**:
+    ```sh
+    pip install -r requirements.txt
     ```
 
-3. **Set up environment variables:**
-    - Create a `.env` file in the root directory.
-    - Add your Google API key:
-        ```env
-        GOOGLE_API_KEY=your_google_api_key_here
-        ```
+3. **Place your trained model (`fil.h5`) and dataset (`nn.csv`) in the root directory of the project**.
 
-4. **Run the application:**
-    ```bash
-    streamlit run app.py
+### Running the Application
+
+1. **Set the FLASK_APP environment variable**:
+    ```sh
+    export FLASK_APP=app.py
     ```
 
-## 📘 Usage
+2. **Run the Flask application**:
+    ```sh
+    flask run
+    ```
 
-1. **Upload PDF Documents:** The application processes PDF documents to build a knowledge base. Ensure that the PDF files are in the same directory as the script.
-2. **Select Language:** Choose your preferred language from the dropdown menu.
-3. **Ask Questions:** You can ask questions by typing in the text input box or using the voice input feature.
-4. **Receive Answers:** The application will process your question and provide detailed answers. You can also listen to the answers in the selected language.
+3. **Open your web browser and go to** [http://127.0.0.1:5000/](http://127.0.0.1:5000/) **to view the application**.
 
-## 🤝 Contributing
+## Usage 🔍
 
-We welcome contributions to enhance CropCraft-AI. Here’s how you can help:
+### Student Registration and Login
 
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-branch`.
-3. Make your changes and commit them: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-branch`.
-5. Open a pull request.
+Students can register and log in to their accounts. Once logged in, they can view available assignments, submit their work, and track their points. 📚
 
-## 🙏 Acknowledgements
+### Teacher Login
 
-- [Streamlit](https://www.streamlit.io/)
-- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
-- [pyttsx3](https://pypi.org/project/pyttsx3/)
-- [gTTS](https://pypi.org/project/gTTS/)
-- [Google Translate](https://pypi.org/project/googletrans/)
-- [Google Generative AI](https://ai.google/)
-- [FAISS](https://faiss.ai/)
-- [Langchain](https://langchain.ai/)
-- [PyPDF2](https://pypi.org/project/PyPDF2/)
+Teachers can log in to assign tasks to students and manage student data. 🧑‍🏫
+
+### Assignments and Points
+
+Students earn points by completing assignments. These points can be redeemed for various benefits listed on the platform. 🎁
+
+### Career Prediction
+
+Upon completion of the 10th standard, students' accumulated points and performance data are analyzed by an AI model to predict the best career path. 📈
+
+### Career Recommendations
+
+The AI model provides career recommendations based on the student's performance in different subjects and activities. The recommendations include suggested degrees and potential career paths. 🏆
+
+
+## License 📝
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ---
 
-### Screenshots
-
-#### Crop Craft-AI
-![Home Page](images/home.png)
-
-Feel free to explore, use, and contribute to CropCraft-AI! 🌱
